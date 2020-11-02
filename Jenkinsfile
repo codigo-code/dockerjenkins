@@ -38,9 +38,20 @@ pipeline {
     }
 
     stage('Gilo') {
-      steps {
-        sh '''git version
+      parallel {
+        stage('Gilo') {
+          steps {
+            sh '''git version
 docker version'''
+          }
+        }
+
+        stage('Cuando') {
+          steps {
+            sh 'docker version'
+          }
+        }
+
       }
     }
 
