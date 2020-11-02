@@ -41,13 +41,13 @@ pipeline {
       parallel {
         stage('Gilo') {
           steps {
-            sh '´if ["DANTE" == ${DANTE}]; then echo "hola mundo"; else echo "eseremagui"´'
+            sh '${sh(script:if ["DANTE" == ${DANTE}]; then echo "hola mundo"; else echo "eseremagui")}'
           }
         }
 
         stage('Cuando') {
           steps {
-            sh 'docker version'
+            sh 'echo ${DANTE}'
           }
         }
 
