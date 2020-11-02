@@ -37,6 +37,13 @@ pipeline {
       }
     }
 
+    stage('Gilo') {
+      steps {
+        sh '''git version
+docker version'''
+      }
+    }
+
   }
   environment {
     DEMO = '1'
