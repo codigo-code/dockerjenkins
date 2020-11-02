@@ -41,7 +41,7 @@ pipeline {
       parallel {
         stage('Gilo') {
           steps {
-            sh '${sh(script:if ["DANTE" == ${DANTE}]; then echo "hola mundo"; else echo "eseremagui")}'
+            timestamps()
           }
         }
 
