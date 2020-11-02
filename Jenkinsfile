@@ -41,8 +41,7 @@ pipeline {
       parallel {
         stage('Gilo') {
           steps {
-            sh '''git version
-docker version'''
+            sh '´if ["DANTE" == ${DANTE}]; then echo "hola mundo"; else echo "eseremagui"´'
           }
         }
 
@@ -59,5 +58,6 @@ docker version'''
   environment {
     DEMO = '1'
     CARLOTO = 'Chorrita'
+    DANTE = 'DANTE'
   }
 }
