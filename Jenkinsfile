@@ -20,8 +20,19 @@ pipeline {
     }
 
     stage('Fin') {
-      steps {
-        echo 'finitoooloca'
+      parallel {
+        stage('Fin') {
+          steps {
+            echo 'finitoooloca'
+          }
+        }
+
+        stage('Guardando....') {
+          steps {
+            sh 'writeFile file: "tiburcio", text: "pedoooooo"'
+          }
+        }
+
       }
     }
 
