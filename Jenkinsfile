@@ -29,7 +29,7 @@ pipeline {
 
         stage('Guardando....') {
           steps {
-            sh 'writeFile file: \'tiburcio\', text: \'pedoooooo\''
+            writeFile(file: 'Sorongogo', text: '${CARLOTO}')
           }
         }
 
