@@ -29,7 +29,8 @@ pipeline {
 
         stage('Guardando....') {
           steps {
-            writeFile(file: 'Sorongogo', text: '${CARLOTO}')
+            writeFile(file: 'Sorongogo.txt', text: '${CARLOTO}')
+            archiveArtifacts 'Sorongogo.txt'
           }
         }
 
