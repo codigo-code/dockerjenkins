@@ -6,12 +6,13 @@ pipeline {
         stage('Compilando') {
           steps {
             echo 'Muestro $DEMO'
+            sh 'echo " el valor de DEMO ES $DEMO"'
           }
         }
 
         stage('Vieja Zorra') {
           steps {
-            echo '$CARLOTO'
+            sh 'echo "Carloto es $Carloto"'
           }
         }
 
