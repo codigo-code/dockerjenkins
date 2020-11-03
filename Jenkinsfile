@@ -37,20 +37,9 @@ pipeline {
       }
     }
 
-    stage('Gilo') {
-      parallel {
-        stage('Gilo') {
-          steps {
-            timestamps()
-          }
-        }
-
-        stage('Cuando') {
-          steps {
-            sh 'echo ${DANTE}'
-          }
-        }
-
+    stage('Finalos') {
+      steps {
+        sh 'echo ${DANTE}'
       }
     }
 
